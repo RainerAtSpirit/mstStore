@@ -34,7 +34,7 @@ export class AppStore {
 	viewsStore: IStore
 	constructor(appId) {
 		this.appId = appId
-		this.transportLayer = createTransportLayer(appId, true)
+		this.transportLayer = createTransportLayer(appId)
 		this.listsStore = Store.create({endpoint: '/odata/Lists', data: []}, {tl: this.transportLayer})
 		this.viewsStore = Store.create({endpoint: '/odata/GridConfigs', data: []}, {tl: this.transportLayer})
 	}

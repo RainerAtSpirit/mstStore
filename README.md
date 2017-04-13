@@ -4,7 +4,13 @@
 **Important!** Install dependencies with `yarn` to get the same package versions.
 * Install yarn from https://yarnpkg.com/en/docs/install
 * Run `yarn` in root directory of the repo
-
+* Run yarn run dev
+* within console
+```
+var myAppStore = cData.createAppStore('1ee139e0-4fbe-4fc4-9d0a-2beeb6508de1')
+myAppStore.listsStore.read()
+myAppStore.listsStore.data.slice(0)
+```
 
 ### TS4023 errors when tryinig to compile without
 ```javascript
