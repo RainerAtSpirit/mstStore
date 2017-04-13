@@ -1,5 +1,5 @@
 import {createTransportLayer, MockupTransportLayer, ITransportLayer} from './createTransportLayer'
-import {types, getEnv} from 'mobx-state-tree'
+import {types, getEnv, onSnapshot, onPatch} from 'mobx-state-tree'
 import {IObservableArray, action} from 'mobx'
 import {IMSTNode} from 'mobx-state-tree/lib/core/mst-node'
 import {IModelType} from 'mobx-state-tree/lib/types/complex-types/object'
@@ -27,20 +27,30 @@ export const Store = types.model({
 
 export type IStore = typeof Store.Type
 
-export class AppStore {
-	appId: string
-	transportLayer: MockupTransportLayer
-	listsStore: IStore
-	viewsStore: IStore
-	constructor(appId) {
-		this.appId = appId
-		this.transportLayer = createTransportLayer(appId)
-		this.listsStore = Store.create({endpoint: '/odata/Lists', data: []}, {tl: this.transportLayer})
-		this.viewsStore = Store.create({endpoint: '/odata/GridConfigs', data: []}, {tl: this.transportLayer})
-	}
-}
+export const AppStore = types.model({
+	appId: types.string,
+	lists: Store,
+	views: Store
+})
 
 export function createAppStore(appId: string) {
-	return new AppStore(appId)
+	const  transportLayer = createTransportLayer(appId)
+
+
+	const appStore = AppStore.create({
+		appId: appId,
+		lists: Store.create({endpoint: '/odata/Lists', data: []}),
+		views: Store.create({endpoint: '/odata/GridConfigs', data: []})
+	}, {tl: transportLayer})
+
+	onSnapshot(appStore, (data) => {
+		console.log('onSnapShot', data)
+	})
+
+	onPatch(appStore, (data) => {
+		console.log('onPatch', data)
+	})
+
+	return appStore
 }
 
