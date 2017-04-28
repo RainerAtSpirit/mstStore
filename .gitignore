@@ -2,6 +2,7 @@
 .vscode
 .DS_Store
 node_modules
+test-lib
 
 # For the time being publish to github and use it as private repo
 lib

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "rootDir": "../",
+        "module": "commonjs",
+        "target": "es2015",
+        "noImplicitAny": false,
+        "experimentalDecorators": true,
+        "strictNullChecks": true,
+        "sourceMap": false,
+        "outDir": "../test-lib"
+    },
+    "include": [
+        "**/*.ts"
+    ]
+}

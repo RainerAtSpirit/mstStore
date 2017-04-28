@@ -8,6 +8,8 @@
   "author": "Rainer Wittmann",
   "license": "MIT",
   "scripts": {
+    "build-tests": "tsc && tsc -p test/",
+    "test": "npm run build-tests && ava",
     "clean": "shx rm -rf _bundles lib lib-esm",
     "dev": "npm run build && webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3010 --open",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
@@ -31,5 +33,10 @@
     "typescript": "^2.2.1",
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2"
+  },
+  "ava": {
+    "files": [
+      "test-lib/test/**/*.js"
+    ]
   }
 }

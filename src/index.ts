@@ -6,4 +6,4 @@ import {ListModel} from './mst/models'
 
 // Initial API just exporting stores
 export * from './mst'
-export * from './core/Modal/Odata'
+export * from './core/Model'
