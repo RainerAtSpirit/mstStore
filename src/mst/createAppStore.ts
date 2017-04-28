@@ -18,8 +18,8 @@ export function createAppStore(appId: string) {
 	})
 	const appStore = AppStore.create({
 		appId: appId,
-		lists: ListStore.create({ data: [] }),
-		views: ViewsStore.create({ data: [] })
+		lists: ListStore.create({ data: []}),
+		views: ViewsStore.create({ data: []})
 	}, { tl: transportLayer })
 
 	onSnapshot(appStore, (data) => {

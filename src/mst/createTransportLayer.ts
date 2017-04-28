@@ -14,7 +14,8 @@ export class MockupTransportLayer implements ITransportLayer {
 
 	read(url: string, options = {}): Promise<any> {
 		return Promise.resolve({ value: [
-			{Id: 'some guid', Title: 'some title', 'GridConfigJSON': 'hello', AddProp1: '123', AddProp2: false}
+			{Id: '2e90191e-dfa6-453b-908c-c665ea3f239f', Title: 'some title', 'GridConfigJSON': 'hello', AddProp1: '123', AddProp2: false},
+			{Id: 'b918839d-4192-4724-97d5-73c76a42b198', Title: 'other title', 'GridConfigJSON': 'world', AddProp1: '123', AddProp2: false}
 		]})
 	}
 }

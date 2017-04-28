@@ -9,9 +9,13 @@ export const createEndPointStore = (endpoint: string, Model) => {
 		read() {
 			const tl = getEnv(this).tl
 			return tl.read(this.endpoint)
-				.then(action((data: any) => {
-					this.data = data.hasOwnProperty('value') ? data.value : data
-				}))
+					.then(action((data: any) => {
+					const values = data.hasOwnProperty('value') ? data.value : data
+					this.data = values.map((item) => {
+							return Model.create(item)
+						}
+					)
+				}).bind(this))
 		}
 	})
 }
