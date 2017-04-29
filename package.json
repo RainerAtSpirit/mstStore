@@ -19,11 +19,11 @@
     "mobx": "^3.1.9"
   },
   "dependencies": {
-    "ava": "^0.19.1",
     "es6-promise": "^4.1.0",
     "mobx-state-tree": "^0.3.1"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "awesome-typescript-loader": "^3.1.2",
     "html-webpack-plugin": "^2.28.0",
     "mobx": "^3.1.9",
