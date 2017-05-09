@@ -4,7 +4,6 @@ import { IObservableArray, toJS } from 'mobx'
 import { IMSTNode } from 'mobx-state-tree/lib/core/mst-node'
 import { ISnapshottable, IType } from 'mobx-state-tree/lib/types/type'
 
-
 export const FilterExpression = types.model('FilterExpression', {
 	field: types.string,
 	operator: types.union(
