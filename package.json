@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build-tests": "tsc && tsc -p test/",
-    "test": "npm run build-tests && ava",
+    "test": "shx rm -rf test-lib && npm run build-tests && ava",
     "clean": "shx rm -rf _bundles lib lib-esm",
     "dev": "npm run build && webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3010 --open",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",

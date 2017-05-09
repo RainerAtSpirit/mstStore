@@ -22,14 +22,11 @@ test('it should be a appStore  ', (t) => {
 })
 
 test('it should update lists.data on lists.read() ', (t) => {
-	return appStore.lists.read().then(data => {
-		const s: any = getSnapshot(data)
-	})
-})
-
-test('it should create an ', (t) => {
-	return appStore.lists.read().then(data => {
-		const s: any = getSnapshot(data)
-		t.deepEqual(s, result)
-	}, err => console.log('err', err))
+		return appStore.lists.read().then(data => {
+			const s: any = getSnapshot(data)
+			t.deepEqual(s, result)
+		}, err => {
+			console.log('err', err)
+			t.is(err.message, "[mobx-state-tree] Cannot modify \'AnonymousModel@/lists\', the object is protected and can only be modified by using an action."​​)
+		})
 })
