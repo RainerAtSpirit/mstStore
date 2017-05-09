@@ -3,7 +3,7 @@ import { IObservableArray, action } from 'mobx'
 import { IModelType } from 'mobx-state-tree/lib/types/complex-types/object'
 
 export const createEndPointStore = (endpoint: string, Model) => {
-	return types.model({
+	return types.model(Model.name + 's', {
 		endpoint: endpoint,
 		data: types.array(Model)
 	}, {
@@ -13,9 +13,8 @@ export const createEndPointStore = (endpoint: string, Model) => {
 					.then(action((data: any) => {
 					const values = data.hasOwnProperty('value') ? data.value : data
 					this.data = values.map((item) => {
-							return Model.create(item)
-						}
-					)
+							return item
+					})
 					return this.data
 				}).bind(this))
 		}

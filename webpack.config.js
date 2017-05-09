@@ -91,7 +91,7 @@ var config = {
 		net: 'empty'
 	},
 	externals: {
-		mobx: 'mobx'
+		// mobx: 'mobx'
 	}
 }
 

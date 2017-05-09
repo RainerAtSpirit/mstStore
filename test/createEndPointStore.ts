@@ -10,5 +10,5 @@ test('it should be a appStore  ', (t) => {
 
 test('it should update lists.data on lists.read() ', async t => {
 	const error = await t.throws(appStore.lists.read());
-	t.deepEqual(error.message, '[mobx-state-tree] Cannot modify \'AnonymousModel@/lists\', the object is protected and can only be modified by using an action.' )
+	t.is(error.message, '[mobx-state-tree] Cannot modify \'Lists@/lists\', the object is protected and can only be modified by using an action.' )
 })

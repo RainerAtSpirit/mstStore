@@ -11,7 +11,7 @@ export function createAppStore(appId: string) {
 	const ListStore = createEndPointStore('odata/Lists', ListModel)
 	const ViewsStore = createEndPointStore('odata/GridConfigs', ViewModel)
 
-	const AppStore = types.model({
+	const AppStore = types.model('App', {
 		appId: types.string,
 		lists: ListStore,
 		views: ViewsStore
