@@ -24,6 +24,12 @@ test('it should be a appStore  ', (t) => {
 test('it should update lists.data on lists.read() ', (t) => {
 	return appStore.lists.read().then(data => {
 		const s: any = getSnapshot(data)
+	})
+})
+
+test('it should create an ', (t) => {
+	return appStore.lists.read().then(data => {
+		const s: any = getSnapshot(data)
 		t.deepEqual(s, result)
 	}, err => console.log('err', err))
 })
