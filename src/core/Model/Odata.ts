@@ -35,8 +35,8 @@ export const Odata = types.model('Odata', {
 	$filter: types.withDefault(types.frozen, {}),
 	$orderby: types.withDefault(types.array(SortExpression), []),
 	$select: types.withDefault(types.array(types.string), []),
-	$top: types.withDefault(types.number, 30),
-	// actions have to be moved into second argument once https://github.com/mobxjs/mobx-state-tree/pull/99 has been merged
+	$top: types.withDefault(types.number, 30)
+}, {
 	expand(options: string[] | null) {
 		if (options === null) {
 			return toJS(this.$top)

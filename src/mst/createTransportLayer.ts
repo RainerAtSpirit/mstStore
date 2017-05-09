@@ -2,7 +2,8 @@ import {merge} from 'lodash'
 import {Promise} from 'es6-promise'
 
 export interface ITransportLayer {
-	appId: string
+	appId: string,
+	read: Function
 }
 
 export class MockupTransportLayer implements ITransportLayer {

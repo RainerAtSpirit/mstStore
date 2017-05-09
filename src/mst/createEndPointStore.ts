@@ -15,6 +15,7 @@ export const createEndPointStore = (endpoint: string, Model) => {
 							return Model.create(item)
 						}
 					)
+					return this.data
 				}).bind(this))
 		}
 	})
