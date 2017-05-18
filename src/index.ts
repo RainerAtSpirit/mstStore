@@ -7,5 +7,3 @@ useStrict(true)
 // Initial API just exporting stores
 export * from './mst'
 export * from './core/Model'
-
-

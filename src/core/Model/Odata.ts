@@ -30,11 +30,11 @@ export const SortExpression = types.model('SortExpression', {
 type ISortExpression = typeof SortExpression.Type
 
 export const Odata = types.model('Odata', {
-	$expand: types.withDefault(types.array(types.string), []),
-	$filter: types.withDefault(types.frozen, {}),
-	$orderby: types.withDefault(types.array(SortExpression), []),
-	$select: types.withDefault(types.array(types.string), []),
-	$top: types.withDefault(types.number, 30)
+	$expand: types.optional(types.array(types.string), []),
+	$filter: types.optional(types.frozen, {}),
+	$orderby: types.optional(types.array(SortExpression), []),
+	$select: types.optional(types.array(types.string), []),
+	$top: types.optional(types.number, 30)
 }, {
 	expand(options: string[] | null) {
 		if (options === null) {

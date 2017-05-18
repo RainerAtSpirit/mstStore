@@ -22,13 +22,13 @@ export function createAppStore(appId: string) {
 		views: ViewsStore.create({ data: []})
 	}, { tl: transportLayer })
 
-	onSnapshot(appStore, (data) => {
-		console.log('onSnapShot', data)
-	})
-
-	onPatch(appStore, (data) => {
-		console.log('onPatch', data)
-	})
+	// onSnapshot(appStore, (data) => {
+	// 	console.log('onSnapShot', data)
+	// })
+  //
+	// onPatch(appStore, (data) => {
+	// 	console.log('onPatch', data)
+	// })
 
 	return appStore
 }

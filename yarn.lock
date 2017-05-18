@@ -2642,9 +2642,9 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
-mobx-state-tree@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/mobx-state-tree/-/mobx-state-tree-0.5.1.tgz#22b9a6cf5fa50ac60fb66c5591ca5e7468791bd8"
+mobx-state-tree@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/mobx-state-tree/-/mobx-state-tree-0.6.1.tgz#cbdf3f1e664e7e168df6f9411d8ac2278514bfbb"
 
 mobx@^3.1.9:
   version "3.1.9"

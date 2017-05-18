@@ -21,7 +21,7 @@
   "dependencies": {
     "ava": "^0.19.1",
     "es6-promise": "^4.1.0",
-    "mobx-state-tree": "^0.5.1"
+    "mobx-state-tree": "^0.6.1"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
