@@ -1,1 +1,1 @@
-export {Odata} from './Odata'
+export {ODataStore} from './Odata'
