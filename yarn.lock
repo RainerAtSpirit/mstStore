@@ -2642,13 +2642,13 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
-mobx-state-tree@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/mobx-state-tree/-/mobx-state-tree-0.6.2.tgz#aef2fdc2c71731c963c418525cfdc52e8031c9c7"
+mobx-state-tree@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/mobx-state-tree/-/mobx-state-tree-0.7.3.tgz#b3b8c125bdd955c451231cc30a4524b386ad3c5c"
 
-mobx@^3.1.9:
-  version "3.1.9"
-  resolved "http://localhost:4873/mobx/-/mobx-3.1.9.tgz#ed4af9d874ff6032c7af91fc1b87d9d33122a557"
+mobx@^3.1.16:
+  version "3.1.16"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.1.16.tgz#7ef06b6de7cba31d2ca872484d47ee36265d7768"
 
 ms@0.7.1:
   version "0.7.1"
@@ -3910,9 +3910,9 @@ type-is@~1.6.14:
     media-typer "0.3.0"
     mime-types "~2.1.15"
 
-typescript@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.2.tgz#f0f045e196f69a72f06b25fd3bd39d01c3ce9984"
+typescript@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.4.tgz#3d38321828231e434f287514959c37a82b629f42"
 
 uglify-js@^2.8.5, uglify-js@~2.8.22:
   version "2.8.22"

@@ -1,7 +1,7 @@
 import {types, getParent, getSnapshot} from 'mobx-state-tree'
 import {IModelType} from 'mobx-state-tree/lib/types/complex-types/object'
 import {IObservableArray, toJS} from 'mobx'
-import {IMSTNode} from 'mobx-state-tree/lib/core/mst-node'
+import {IComplexValue} from 'mobx-state-tree/lib/core/node'
 import {ISnapshottable, IType} from 'mobx-state-tree/lib/types/type'
 
 export const FilterExpression = types.model('FilterExpression', {
