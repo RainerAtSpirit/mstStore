@@ -1,8 +1,7 @@
 import {types, getParent, getSnapshot} from 'mobx-state-tree'
-import {IModelType} from 'mobx-state-tree/lib/types/complex-types/object'
+import {IModelType} from 'mobx-state-tree/dist/types/complex-types/object'
 import {IObservableArray, toJS} from 'mobx'
-import {IComplexValue} from 'mobx-state-tree/lib/core/node'
-import {ISnapshottable, IType} from 'mobx-state-tree/lib/types/type'
+import {ISnapshottable, IType} from 'mobx-state-tree/dist/types/type'
 
 export const FilterExpression = types.model('FilterExpression', {
   field: types.string,
@@ -31,7 +30,7 @@ export const FilterOrGroup = types.union(snapshot => snapshot && 'logic' in snap
   FilterExpression, late)
 
 // TypeScript is'nt smart enough to infer self referencing types -> We are smarter ;)
-export const FilterGroup: FilterGroupModel = types.model({
+export const FilterGroup = types.model({
   logic: types.optional(types.union(types.literal('and'), types.literal('or')), 'and'),
   filters: types.optional(types.array(FilterOrGroup), [])
 })

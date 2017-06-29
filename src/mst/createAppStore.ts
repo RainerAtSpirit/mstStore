@@ -1,10 +1,9 @@
 import {types, getEnv, onSnapshot, onPatch} from 'mobx-state-tree'
 import {IObservableArray, action} from 'mobx'
-import {IComplexValue} from 'mobx-state-tree/lib/core/node'
-import {ISnapshottable} from 'mobx-state-tree/lib/types/type'
 import {createTransportLayer, MockupTransportLayer, ITransportLayer} from './createTransportLayer'
 import {createEndPointStore} from './createEndPointStore'
 import {ListModel, ViewModel} from './models'
+import {ISnapshottable} from 'mobx-state-tree/dist/types/type'
 
 export function createAppStore(appId: string) {
   const transportLayer = createTransportLayer(appId)

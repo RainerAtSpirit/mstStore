@@ -1,5 +1,5 @@
 import {types} from 'mobx-state-tree'
-import {IModelType} from 'mobx-state-tree/lib/types/complex-types/object'
+import {IModelType} from 'mobx-state-tree/dist/types/complex-types/object'
 
 export const ListModel = types.model('List', {
   Id: types.identifier(),

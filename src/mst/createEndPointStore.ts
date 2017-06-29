@@ -1,9 +1,8 @@
 import {types, getEnv} from 'mobx-state-tree'
 import {toJS} from 'mobx'
-import {IModelType} from 'mobx-state-tree/lib/types/complex-types/object'
+import {IModelType} from 'mobx-state-tree/dist/types/complex-types/object'
 import {IObservableArray, action} from 'mobx'
-import {IComplexValue} from 'mobx-state-tree/lib/core/node'
-import {ISnapshottable} from 'mobx-state-tree/lib/types/type'
+import {ISnapshottable} from 'mobx-state-tree/dist/types/type'
 
 export const createEndPointStore = (endpoint: string, Model) => {
   return types.model(Model.name + 's', {
