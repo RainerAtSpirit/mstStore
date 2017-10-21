@@ -1,6 +1,6 @@
-import { test } from 'ava'
-import { getSnapshot, onSnapshot } from 'mobx-state-tree'
-import { ODataStore } from '../src/core/Model/Odata'
+import {test} from 'ava'
+import {getSnapshot, onSnapshot} from 'mobx-state-tree'
+import {ODataStore} from '../src/core/Model/Odata'
 
 const complexFilter = {
   logic: 'and',
@@ -37,7 +37,7 @@ const complexFilter = {
     }
   ]
 }
-const simpleFilter = { logic: 'and', filters: [{field: 'test', operator: 'eq', value: 123}] }
+const simpleFilter = {logic: 'and', filters: [{field: 'test', operator: 'eq', value: 123}]}
 
 // === FACTORY TESTS ===
 test('it should produce default Odata options when called with an empty object', (t) => {
@@ -85,7 +85,6 @@ test('it should take partial Odata options', (t) => {
 test('it should throw when trying to update observables directly', (t) => {
 
   const instance = ODataStore.create()
-
   let history: any[] = []
   onSnapshot(instance, data => history.push(data))
 
@@ -148,12 +147,12 @@ test('it should runtime check filter expression', (t) => {
   onSnapshot(instance, data => history.push(data))
 
   let error = t.throws(() => {
-    instance.filter({ logic: 'and', filters: [{field: 'test', operator: 'invalid', value: 123}] })
+    instance.filter({logic: 'and', filters: [{field: 'test', operator: 'invalid', value: 123}]})
   })
   t.regex(error.message, /Error while converting/)
 
   error = t.throws(() => {
-    instance.filter({ logic: 'invalid', filters: [{field: 'test', operator: 'eq', value: 123}] })
+    instance.filter({logic: 'invalid', filters: [{field: 'test', operator: 'eq', value: 123}]})
   })
   t.regex(error.message, /Error while converting/)
 
